@@ -1535,7 +1535,7 @@ a, button {
 
 .single_services:hover{
   --tw-border-opacity: 1;
-  border-color: rgba(249, 79, 79, var(--tw-border-opacity));
+  border-color: #F06E2A;
 }
 
 .single_services{
@@ -1623,7 +1623,7 @@ a, button {
 .single_services:hover .services_shape {
   fill: currentColor;
   --tw-text-opacity: 1;
-  color: rgba(249, 79, 79, var(--tw-text-opacity));
+  color: #f06900;
 }
 
 /* ========== about ========== */
