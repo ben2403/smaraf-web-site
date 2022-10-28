@@ -1,0 +1,827 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Plain - Multipurpose TailwindCSS Template</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/tiny-slider.css">
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/fonts/lineicons/font-css/LineIcons.css">
+
+    <!--====== Tailwind CSS ======-->
+    <link rel="stylesheet" href="assets/css/tailwindcss.css">
+
+    <link rel="stylesheet" href="style.scss">
+
+    <link rel="stylesheet" href="src/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+        .onoffswitch3 {
+            position: relative;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitch3-checkbox {
+            display: none;
+        }
+
+        .onoffswitch3-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 0px solid #999999;
+            border-radius: 0px;
+        }
+
+        .onoffswitch3-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            -moz-transition: margin 0.3s ease-in 0s;
+            -webkit-transition: margin 0.3s ease-in 0s;
+            -o-transition: margin 0.3s ease-in 0s;
+            transition: margin 0.3s ease-in 0s;
+        }
+
+        .onoffswitch3-inner>span {
+            display: block;
+            float: left;
+            position: relative;
+            width: 50%;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .onoffswitch3-inner .onoffswitch3-active {
+            padding-left: 10px;
+            background-color: #EEEEEE;
+            color: #FFFFFF;
+        }
+
+        .onoffswitch3-inner .onoffswitch3-inactive {
+            width: 1000px;
+            padding-left: 16px;
+            background-color: #EEEEEE;
+            color: #FFFFFF;
+            text-align: right;
+        }
+
+        .onoffswitch3-switch {
+            display: block;
+            width: 50%;
+            margin: 0px;
+            text-align: center;
+            border: 0px solid #999999;
+            border-radius: 0px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        .onoffswitch3-active .onoffswitch3-switch {
+            background: #F06E2A;
+            left: 0;
+            width: 220px;
+        }
+
+        .onoffswitch3-inactive {
+            background: #A1A1A1;
+            right: 0;
+            width: 20px;
+        }
+
+        .onoffswitch3-checkbox:checked+.onoffswitch3-label .onoffswitch3-inner {
+            margin-left: 0;
+        }
+
+        .scroll-text {
+            color: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <section class="header_area">
+        <div class="navbar-area bg-white">
+            <div class="container relative">
+                <div class="row items-center">
+                    <div class="w-full">
+                        <div class="onoffswitch3">
+                            <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3"
+                                checked>
+                            <label class="onoffswitch3-label" for="myonoffswitch3">
+                                <span class="onoffswitch3-inner">
+                                    <span class="onoffswitch3-active">
+                                        <marquee class="scroll-text">Notre site fait peau neuve. Nous nous excusons pour
+                                            la gêne occasionnée, mais nous effectuons une maintenance sur notre site.
+                                            vous pouvez nous contacter à support@smaraf.com ou contacter le +243
+                                            995125644. Nous reviendrons bientôt !
+                                        </marquee>
+                                        <span class="onoffswitch3-switch">SITE EN MAINTENANCE<span
+                                                class="glyphicon glyphicon-remove"></span></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
+                            <a class="navbar-brand mr-9" href="index.html">
+                                <img src="Smaraf_logo.png" alt="Logo">
+                            </a>
+                            <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
+                                data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent shadow lg:shadow-none"
+                                id="navbarOne">
+                                <ul id="nav"
+                                    class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll active" href="#home">Accueil</a>
+                                    </li>
+
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#services">Services</a>
+                                    </li>
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#footer">A propos</a>
+                                    </li>
+                                    <!-- <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#work">Projects</a>
+                                    </li>
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#pricing">Pricing</a>
+                                    </li>
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#blog">Blog</a> -->
+                                    </li>
+                                    <li class="nav-item ml-5 lg:ml-11">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header navbar -->
+
+        <div id="home" class="header_hero bg-gray relative z-10 overflow-hidden lg:flex items-center">
+            <div class="hero_shape shape_1">
+                <img src="assets/images/shape/shape-1.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_2">
+                <img src="assets/images/shape/shape-2.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_3">
+                <img src="assets/images/shape/shape-3.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_4">
+                <img src="assets/images/shape/shape-4.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_6">
+                <img src="assets/images/shape/shape-1.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_7">
+                <img src="assets/images/shape/shape-4.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_8">
+                <img src="assets/images/shape/shape-3.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_9">
+                <img src="assets/images/shape/shape-2.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_10">
+                <img src="assets/images/shape/shape-4.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_11">
+                <img src="assets/images/shape/shape-1.svg" alt="shape">
+            </div><!-- hero shape -->
+            <div class="hero_shape shape_12">
+                <img src="assets/images/shape/shape-2.svg" alt="shape">
+            </div><!-- hero shape -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="w-full lg:w-1/2">
+                        <div class="header_hero_content pt-150 lg:pt-0">
+                            <h2
+                                class="hero_title text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold">
+                                Votre objectif est notre réussite <span class="text" style="color:#F06E2A">Smaraf
+                                    Sarl</span></h2>
+                            <p class="mt-8 lg:mr-8">Développement de systeme de securite et Integration technologique.
+                                Nous provmouvons la tranquillité et la securite en vous offrant des solutions integrees
+                                est taillees sur mesures</p>
+                            </p>
+                            <div class="hero_btn mt-10">
+                                <a class="main-btn" href="#contact">Nous contacter </a>
+                            </div>
+                        </div> <!-- header hero content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header_shape hidden lg:block"></div>
+            <div class="header_image flex items-center">
+                <div class="image 2xl:pl-25">
+                    <svg id="f66c61ec-c7a0-4107-a568-0530ba411188" data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg" width="865.76" height="682.89" viewBox="0 0 865.76 682.89">
+                        <rect x="457.11" y="142.41" width="135.88" height="185.03" fill="#b2c1f9" data-primary="true">
+                        </rect>
+                        <rect x="462.72" y="148.02" width="125.33" height="174.47" fill="#fff" opacity="0.62"></rect>
+                        <rect x="474.35" y="158.9" width="100.5" height="151.59" fill="#fff" opacity="0.62"></rect>
+                        <path
+                            d="M492.53,240.1,490.85,286a13.57,13.57,0,0,1-1.68,6L474.59,318.2a14.66,14.66,0,0,1-15.31,7.33L356.17,307.82c4.2.44,8.56-2.59,11.11-4.78a17.16,17.16,0,0,0,3.39-4l10.42-16.82a37,37,0,0,0,6.59-19.62L389.17,224v-.88A15.85,15.85,0,0,0,375.92,208l105.42,18.28A13.5,13.5,0,0,1,492.53,240.1Z"
+                            fill="#7191aa" data-secondary="true"></path>
+                        <path
+                            d="M492.53,240.1,490.85,286a13.57,13.57,0,0,1-1.68,6L474.59,318.2a14.66,14.66,0,0,1-15.31,7.33L356.17,307.82c4.2.44,8.56-2.59,11.11-4.78a17.16,17.16,0,0,0,3.39-4l10.42-16.82a37,37,0,0,0,6.59-19.62L389.17,224v-.88A15.85,15.85,0,0,0,375.92,208l105.42,18.28A13.5,13.5,0,0,1,492.53,240.1Z"
+                            opacity="0.2"></path>
+                        <path
+                            d="M382,299.77l12.75-23.24s3.75-5.5,3-20.25l.09-18.84s.66-9.65,11.65-8.65L472.76,240c1.36.24,2.73.4,4.1.53,2.1.2,6.35,1.59,6.35,9.49l-1.75,33.25a23.72,23.72,0,0,1-3,10l-13,21.5Z"
+                            fill="#7191aa" data-secondary="true"></path>
+                        <path d="M368.53,309.94s6.13.34,13.45-10.17l83.48,15s-4.38,8.46-12.63,9.66Z" opacity="0.2">
+                        </path>
+                        <path
+                            d="M438.48,238.22l-.8-.15h0c-10.11-1.61-20.57,6.79-25.57,19.82A45.44,45.44,0,0,0,409.21,271c-.91,13.71,4.81,25.56,14.28,28.71h0a13.12,13.12,0,0,0,1.66.46c12,2.58,24.68-9.19,28.36-26.29S450.46,240.79,438.48,238.22Zm11.32,35.1c-3.07,14.29-13.65,24.14-23.63,22-.53-.12-1.06-.27-1.57-.44-5.17-1.82-9-6.79-10.71-13.26a36.07,36.07,0,0,1,6.6-30.66c4.45-5.42,10.27-8.41,16-7.56.29,0,.57.09.86.15C447.29,245.69,452.88,259,449.8,273.32Z"
+                            fill="#36465b"></path>
+                        <path
+                            d="M438.48,238.22l-.8-.15h0c-10.11-1.61-20.57,6.79-25.57,19.82A45.44,45.44,0,0,0,409.21,271c-.91,13.71,4.81,25.56,14.28,28.71h0a13.12,13.12,0,0,0,1.66.46c12,2.58,24.68-9.19,28.36-26.29S450.46,240.79,438.48,238.22Zm11.32,35.1c-3.07,14.29-13.65,24.14-23.63,22-.53-.12-1.06-.27-1.57-.44-5.17-1.82-9-6.79-10.71-13.26a36.07,36.07,0,0,1,6.6-30.66c4.45-5.42,10.27-8.41,16-7.56.29,0,.57.09.86.15C447.29,245.69,452.88,259,449.8,273.32Z"
+                            fill="#fff" opacity="0.2"></path>
+                        <rect x="304.36" y="327.76" width="5.68" height="123.84" fill="#36465b"></rect>
+                        <rect x="304.36" y="327.76" width="5.68" height="123.84" fill="#fff" opacity="0.2"></rect>
+                        <path
+                            d="M123,327.76l118.15,8.14A21,21,0,0,1,256,343.39c3.05,3.73,4.74,8.48.23,13.11a14.09,14.09,0,0,1-7.12,3.83L62.32,400.65Z"
+                            fill="#b2c1f9" data-primary="true"></path>
+                        <path
+                            d="M123,327.76l118.15,8.14A21,21,0,0,1,256,343.39c3.05,3.73,4.74,8.48.23,13.11a14.09,14.09,0,0,1-7.12,3.83L62.32,400.65Z"
+                            opacity="0.2"></path>
+                        <path d="M356.17,307.82c-.32,0-.65-.1-1-.17Z" fill="none" stroke="#ed1c24"
+                            stroke-miterlimit="10" stroke-width="0.25"></path>
+                        <path
+                            d="M389.17,223.16V224l-1.49,38.59a37,37,0,0,1-6.59,19.62l-10.42,16.82a17.16,17.16,0,0,1-3.39,4c-2.55,2.19-6.91,5.22-11.11,4.78l-1-.17L105.86,264.11l17.31-82.62c1.59-7,9.23-15.57,16.33-14.34L375.92,208A15.85,15.85,0,0,1,389.17,223.16Z"
+                            fill="#7191aa" data-secondary="true"></path>
+                        <path d="M465.46,314.77l12.25-74.09s5.94,1,5.5,9.35l-1.75,33.25s-.61,6-3,10Z" opacity="0.4">
+                        </path>
+                        <ellipse cx="465.31" cy="252.56" rx="9.58" ry="6.78"
+                            transform="translate(120.55 654.36) rotate(-77.86)" fill="#b2c1f9" data-primary="true">
+                        </ellipse>
+                        <path
+                            d="M437.68,238.07l-1.23,5.33c-5.69-.85-11.51,2.14-16,7.56a36.07,36.07,0,0,0-6.6,30.66c1.73,6.47,5.54,11.44,10.71,13.26l-1.1,4.79h0l-12.06-1.75c-13.86-4-15.71-23.49-15.71-23.49,2.18-5.75,2.1-14.4,2.1-14.4a40.78,40.78,0,0,1,8.46-17.31c9.64-10.27,18.08-7.43,18.08-7.43l13.29,2.77Z"
+                            fill="#36465b"></path>
+                        <path
+                            d="M235,286.66v61.71a11.35,11.35,0,0,0,10.18,11.29h0A11.35,11.35,0,0,0,257,352.23l21-58.06Z"
+                            fill="#b2c1f9" data-primary="true"></path>
+                        <path
+                            d="M299.49,307.86h14.62a0,0,0,0,1,0,0v17.8a7,7,0,0,1-7,7h-.65a7,7,0,0,1-7-7v-17.8A0,0,0,0,1,299.49,307.86Z"
+                            fill="#36465b"></path>
+                        <rect x="297.26" y="461.35" width="19.49" height="22.94" fill="#36465b"></rect>
+                        <rect x="290.74" y="480.43" width="30.47" height="88.51" rx="4.76" fill="#b2c1f9"
+                            data-primary="true"></rect>
+                        <path
+                            d="M298.93,518.59s20.95-32.48,13.25-43.44c0,0-3.86-8.45-13.63-3,0,0-3.44,1.65-6.43,8.33,0,0-5.69,8.67-10.39,13.18,0,0-6.43,2.77-11.13,12.17l-21.27,32.9s-7.18,5.44-9.65,24l-8.16,45s-4.21,18.06,2.22,32.16c0,0,5.2,15.09,6.19,43h76.43s3-18,4.45-26.71l51-55.66s15.34-10.39,13.85-29.68l1.94-68.75a8.31,8.31,0,0,1,.51-2.66c1.33-3.71,4.21-15.49-9.62-22.09l-42.3-19.54s-7.41-3.93-13.91-2.34l-1.77,6.64a4.41,4.41,0,0,1-3.72,3.31v11.31l22.18,14.83a5.23,5.23,0,0,1,2.31,4.52l-1.06,29.81a4.73,4.73,0,0,1-1.5,3.27A214.49,214.49,0,0,1,306,553.77s-13.82,11.58-17.7,4.91a5.21,5.21,0,0,1-.4-4.18Z"
+                            fill="#f8b69b"></path>
+                        <path
+                            d="M325.78,540.05,321.21,535V485.2a4.79,4.79,0,0,0-4.46-4.77v-3.71l22.18,14.83a5.56,5.56,0,0,1,2.31,4.52l-1.06,29.81a3.93,3.93,0,0,1-1.5,3.27S330.91,536.17,325.78,540.05Z"
+                            fill="#fe8f69"></path>
+                        <path
+                            d="M357.09,467.47s16.65,9.25,16.65,18.8l-1.61,59.87s1.21,6.41-2.2,15l-6.81,13.62s17.42-11.22,16.62-25.63l0-51.42a75.82,75.82,0,0,1,.55-9.16,15.2,15.2,0,0,0-3.21-11.85Z"
+                            fill="#fe8f69"></path>
+                        <polygon points="340.49 517.09 331.6 509.52 340.49 514.23 340.49 517.09" fill="#fc8465">
+                        </polygon>
+                        <path
+                            d="M0,348.21V521L88.05,381.85s34.63-52.44,49.47-64.31c0,0,16.82,6.68,38.59,0l40.56-7.42s27.47,6.49,39.84,7.91c0,0,50.4,28.45,57.6,3.72,0,0,5.92-17.81-18.43-24.49a92.69,92.69,0,0,1-22.61-10.6s-2.47-1.52-11.13-5c0,0-30.18-13.6-43.78-22.51,0,0,15.09-25.72,35.87-42.54,0,0,18.55-14.35,34.87-20.29a119.3,119.3,0,0,0,19.39,0s11.88-3.48,18.59,3.22l67.3,11.64s-.18-4.94-6.9-10.76l-13.19-19.24s-2.46-5.82-12.31-9.39l-37.13-15.22s-8.73-4.47-15.21-4.92l-78.25-6.94s-11.22-3-23.75,7.25c0,0-72.4,50.44-87.24,56.06,0,0-9.89,4.58-21.27,20.68Z"
+                            fill="#f8b69b"></path>
+                        <path d="M218.16,259.16,184,235.75s30,13,38.07,17.24Z" fill="#fe8f69"></path>
+                        <rect x="616.7" y="292.34" width="203.59" height="108.56" fill="#b2c1f9" data-primary="true">
+                        </rect>
+                        <rect x="622.04" y="298.04" width="193.62" height="97.21" fill="#fff" opacity="0.62"></rect>
+                        <rect x="618.45" y="175.76" width="66.23" height="89.67" fill="#b2c1f9" data-primary="true">
+                        </rect>
+                        <rect x="622.04" y="180.34" width="58.59" height="80.94" fill="#fff" opacity="0.62"></rect>
+                        <rect x="635.21" y="192.54" width="31.67" height="55.74" fill="#fff" opacity="0.62"></rect>
+                        <rect x="709.15" y="175.97" width="66.23" height="89.67" fill="#b2c1f9" data-primary="true">
+                        </rect>
+                        <rect x="712.74" y="180.55" width="58.59" height="80.94" fill="#fff" opacity="0.62"></rect>
+                        <rect x="725.91" y="192.75" width="31.67" height="55.74" fill="#fff" opacity="0.62"></rect>
+                        <path
+                            d="M433.9,269.34c-1.37,9.24-8,15.91-14.74,14.9a9.75,9.75,0,0,1-5.27-2.62,36.07,36.07,0,0,1,6.6-30.66,9.68,9.68,0,0,1,3.64-.17C430.9,251.79,435.28,260.1,433.9,269.34Z"
+                            fill="#b2c1f9" data-primary="true"></path>
+                        <ellipse cx="424.35" cy="267.8" rx="9.19" ry="6.15"
+                            transform="translate(94.25 645.71) rotate(-81.12)" fill="#fff" opacity="0.37"></ellipse>
+                        <ellipse cx="424.7" cy="265.55" rx="3.27" ry="2.19"
+                            transform="matrix(0.15, -0.99, 0.99, 0.15, 96.76, 644.16)" fill="#fff" opacity="0.37">
+                        </ellipse>
+                        <path
+                            d="M449.8,273.32c-3.07,14.29-13.65,24.14-23.63,22-6-1.29-10.37-6.59-12.28-13.7a36.07,36.07,0,0,1,6.6-30.66c4.67-5.69,10.85-8.7,16.82-7.41C447.29,245.69,452.88,259,449.8,273.32Z"
+                            fill="#b2c1f9" opacity="0.47" data-primary="true"></path>
+                        <path
+                            d="M316.17,465.41H296.7a4.45,4.45,0,0,1-4.38-3.64l-1.53-8.18a2.88,2.88,0,0,1,2.83-3.41H319.9a2.88,2.88,0,0,1,2.78,3.62l-2.21,8.3A4.46,4.46,0,0,1,316.17,465.41Z"
+                            fill="#b2c1f9" data-primary="true"></path>
+                        <polygon points="642.48 636.55 623.6 636.55 617.59 605.47 648.68 605.47 642.48 636.55"
+                            fill="#bad7e7"></polygon>
+                        <rect x="480.17" y="503.76" width="120.54" height="37.62" fill="#bad7e7"></rect>
+                        <rect x="480.17" y="503.76" width="120.54" height="37.62" opacity="0.2"></rect>
+                        <rect x="483.42" y="537.69" width="301.69" height="59.37" fill="#bad7e7"></rect>
+                        <rect x="483.42" y="537.69" width="301.69" height="59.37" opacity="0.4"></rect>
+                        <path
+                            d="M591.67,537.69l15.79-77.58a12.41,12.41,0,0,1,12.15-9.93H865.76v53.87h-77.1a5.36,5.36,0,0,0-5.36,5.36v28.28Z"
+                            fill="#bad7e7"></path>
+                        <path
+                            d="M591.67,537.69l15.79-77.58a12.41,12.41,0,0,1,12.15-9.93H865.76v53.87h-77.1a5.36,5.36,0,0,0-5.36,5.36v28.28Z"
+                            fill="#fff" opacity="0.2"></path>
+                        <polygon points="771.6 605.47 865.76 605.47 865.76 503.76 796.67 503.76 794 580.03 771.6 605.47"
+                            fill="#bad7e7"></polygon>
+                        <polygon points="771.6 605.47 865.76 605.47 865.76 503.76 796.67 503.76 794 580.03 771.6 605.47"
+                            opacity="0.4"></polygon>
+                        <rect x="626.3" y="537.69" width="149.65" height="43.78" rx="7.51" fill="#bad7e7"></rect>
+                        <polygon points="523.5 605.47 512.44 637.04 532.13 637.04 555.06 605.47 523.5 605.47"
+                            fill="#bad7e7"></polygon>
+                        <polygon points="522.06 637.04 540.44 605.47 555.06 605.47 532.13 637.04 522.06 637.04"
+                            opacity="0.2"></polygon>
+                        <polygon points="771.6 636.4 751.39 636.4 745.03 605.47 775.96 605.47 771.6 636.4"
+                            fill="#bad7e7"></polygon>
+                        <polygon points="848.71 605.47 865.76 630.32 865.76 605.47 848.71 605.47" fill="#bad7e7">
+                        </polygon>
+                        <path
+                            d="M467,566.65V507a3.24,3.24,0,0,1,3.25-3.24h9.92a3.24,3.24,0,0,1,3.25,3.24v69.75a17.18,17.18,0,0,0,17.18,17.17h265A17.32,17.32,0,0,0,783,576.61V509.09a4.76,4.76,0,0,1,4.76-4.76h8.94a4.77,4.77,0,0,1,4.77,4.76v63.37a33,33,0,0,1-33,33H501.27A34.27,34.27,0,0,1,467,571.2Z"
+                            fill="#bad7e7"></path>
+                        <path
+                            d="M467,566.65V507a3.24,3.24,0,0,1,3.25-3.24h9.92a3.24,3.24,0,0,1,3.25,3.24v69.75a17.18,17.18,0,0,0,17.18,17.17h265A17.32,17.32,0,0,0,783,576.61V509.09c0-2.63,2.13-5.33,4.76-5.33h8.94c2.63,0,4.77,2.7,4.77,5.33v63.37a33,33,0,0,1-33,33H501.27A34.27,34.27,0,0,1,467,571.2Z"
+                            opacity="0.3"></path>
+                        <rect x="476.55" y="537.69" width="149.76" height="43.78" rx="11.42" fill="#bad7e7"></rect>
+                        <polygon points="634.22 636.55 634.22 605.47 648.68 605.47 642.48 636.55 634.22 636.55"
+                            opacity="0.2"></polygon>
+                        <polygon points="760.49 636.4 760.49 605.47 745.03 605.47 751.39 636.4 760.49 636.4"
+                            opacity="0.2"></polygon>
+                        <rect x="635.21" y="310.49" width="166.93" height="73.32" fill="#fff" opacity="0.62"></rect>
+                    </svg>
+                </div>
+            </div> <!-- header image -->
+        </div> <!-- header hero -->
+    </section>
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== SERVICES PART START ======-->
+
+
+    <!--====== SERVICES PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    <section id="why" class="about_area pt-120 relative">
+        <div class="about_image flex items-end justify-end">
+            <div class="image lg:pr-13">
+                <img src="assets/images/about.svg" alt="about">
+            </div>
+        </div> <!-- about image -->
+        <div class="container">
+            <div class="row justify-end">
+                <div class="w-full lg:w-1/2">
+                    <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
+                        <div class="section_title pb-9">
+                            <h5 class="sub_title">Pourquoi nous choisir</h5>
+                            <h4 class="main_title">Notre objectif est</h4>
+                        </div> <!-- section title -->
+                        <p></p>
+                        <ul class="about_list pt-3">
+                            <li class="flex mt-5">
+                                <div class="about_check">
+                                    <i class="lni lni-checkmark-circle" style="background-color: #F06E2A"></i>
+                                </div>
+                                <div class="about_list_content pl-5 pr-2">
+                                    <p>Offrir la tranquillité d'esprit en proposant des solutions de sécurité intégrées
+                                        et personnalisées. nous nous efforçons de collaborer avec nos clients pour
+                                        comprendre leurs aspirations professionnelles et garantir la réalisation de
+                                        leurs plans et objectifs actuels et futurs. nous assurons la qualité à tous les
+                                        niveaux de notre organisation pour le bénéfice de nos clients.</p>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex mt-5">
+                                <div class="about_check">
+                                    <i class="lni lni-checkmark-circle" style="background-color: #F06E2A"></i>
+                                </div>
+                                <div class="about_list_content pl-5 pr-2">
+                                    <p>Nous aidons les entreprises à accroître l'efficacité de la sécurité, à réduire
+                                        les risques et à éliminer les coûts cachés associés à l'exploitation de systèmes
+                                        de sécurité, d'installations et de systèmes commerciaux non intégrés.</p>
+                                </div>
+                            </li>
+                            <li class="flex mt-5">
+                                <div class="about_check">
+                                    <i class="lni lni-checkmark-circle" style="background-color: #F06E2A"></i>
+                                </div>
+                                <div class="about_list_content pl-5 pr-2">
+                                    <p>
+                                        Faire de notre client un rafiki(Ami).</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- about content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== SERVICES PART START ======-->
+
+
+    <section id="services" class="services_area pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-center">
+                <div class="w-full lg:w-1/2">
+                    <div class="section_title text-center pb-6">
+                        <!-- <h5 class="sub_title">What We Do</h5> -->
+                        <h4 class="main_title">Nos services</h4>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-center">
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <div class="services_icon">
+                            <i class="lni lni-camera"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
+                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12"
+                                    d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
+                            </svg>
+                        </div>
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3
+                                class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
+                                CCTV</h3>
+                            <p class="mt-4">Nous fournissons les solutions de sécurité les plus récentes et les plus
+                                rentables pour tous vos besoins en matière de vidéosurveillance, avec une variété de
+                                caméras et d'équipements de contrôle des principaux fabricants <br><br></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <div class="services_icon">
+                            <i class="lni lni-map"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
+                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12"
+                                    d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
+                            </svg>
+                        </div>
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3
+                                class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
+                                Gps trackng</h3>
+                            <p class="mt-4">Smaraf fournit des solutions complètes pour la gestion de flottes par GPS en
+                                temps réel et des applications de sécurité des véhicules, le suivi des personnes, des
+                                marchandises et des conteneurs <br><br></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <div class="services_icon">
+                            <i class="lni lni-alarm"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
+                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12"
+                                    d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
+                            </svg>
+                        </div>
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3
+                                class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
+                                Alarmes anti-intrusion </h3>
+                            <p class="mt-4">Les alarmes anti-intrusion sont des systèmes conçus pour détecter un intrus
+                                ou une entrée non autorisée dans vos locaux. Une alarme anti-intrusion se compose d'un
+                                équipement de contrôle et de capteurs qui activent une sirène sonore en cas
+                                d'effraction.</p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+
+            </div>
+            <div class="row justify-center">
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <div class="services_icon">
+                            <i class="lni lni-camera"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
+                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12"
+                                    d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
+                            </svg>
+                        </div>
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3
+                                class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
+                                CCTV</h3>
+                            <p class="mt-4">Nous fournissons les solutions de sécurité les plus récentes et les plus
+                                rentables pour tous vos besoins en matière de vidéosurveillance, avec une variété de
+                                caméras et d'équipements de contrôle des principaux fabricants <br><br></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <div class="services_icon">
+                            <i class="lni lni-map"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
+                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12"
+                                    d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
+                            </svg>
+                        </div>
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3
+                                class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
+                                Gps tracking</h3>
+                            <p class="mt-4">Smaraf fournit des solutions complètes pour la gestion de flottes par GPS en
+                                temps réel et des applications de sécurité des véhicules, le suivi des personnes, des
+                                marchandises et des conteneurs <br><br></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
+                    <div class="single_services text-center mt-8 mx-3">
+                        <div class="services_icon">
+                            <i class="lni lni-alarm"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
+                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12"
+                                    d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
+                            </svg>
+                        </div>
+                        <div class="services_content mt-5 xl:mt-10">
+                            <h3
+                                class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">
+                                Alarmes anti-intrusion </h3>
+                            <p class="mt-4">Nous avons une vaste expérience dans le domaine des systèmes de contrôle
+                                d'accès/d'entrée de porte et pouvons recommander un système approprié parmi les nombreux
+                                que nous installons régulièrement <br><br></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+
+            </div>
+            <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+
+    <!--====== SERVICES PART ENDS ======-->
+
+    <!--====== WORK PART START ======-->
+
+
+
+    <!--====== WORK PART ENDS ======-->
+
+    <!--====== PRICING PLAN PART START ======-->
+
+
+    <!--====== TEAM PART START ======-->
+
+
+    <!--====== TEAM PART ENDS ======-->
+
+    <!--====== BLOG PART START ======-->
+
+
+
+    <!--====== BLOG PART ENDS ======-->
+
+    <!--====== CONTACT PART START ======-->
+
+    <section id="contact" class="contact_area relative pt-18 pb-120">
+        <div class="contact_image flex items-center justify-end">
+            <div class="image lg:pr-13">
+                <img src="assets/images/contact.svg" alt="about">
+            </div>
+        </div> <!-- about image -->
+
+        <div class="container">
+            <div class="row justify-end">
+                <div class="w-full lg:w-1/2">
+                    <div class="contact_wrapper mt-11">
+                        <div class="section_title pb-4">
+                            <h5 class="sub_title">Contact</h5>
+                            <h4 class="main_title">Entrer en contact</h4>
+                            <p>N'hésitez pas à nous contacter par téléphone ou par e-mail et nous ne manquerons pas de
+                                vous répondre dans les plus brefs délais.</p>
+                        </div> <!-- section title -->
+
+                        <div class="contact_form">
+                            <form id="contact-form" action="assets/php/contact.php" method="POST">
+                                <div class="row">
+                                    <div class="w-full md:w-1/2">
+                                        <div class="mx-3">
+                                            <div class="single_form mt-8">
+                                                <input name="name" id="name" type="text" placeholder="Name"
+                                                    class="w-full rounded-md py-4 px-6 border border-solid border-body-color">
+                                            </div> <!-- single form -->
+                                        </div>
+                                    </div>
+                                    <div class="w-full md:w-1/2">
+                                        <div class="mx-3">
+                                            <div class="single_form mt-8">
+                                                <input name="email" id="email" type="email" placeholder="Email"
+                                                    class="w-full rounded-md py-4 px-6 border border-solid border-body-color">
+                                            </div> <!-- single form -->
+                                        </div>
+                                    </div>
+                                    <div class="w-full">
+                                        <div class="mx-3">
+                                            <div class="single_form mt-8">
+                                                <textarea name="message" id="message" placeholder="Message" rows="5"
+                                                    class="w-full rounded-md py-4 px-6 border border-solid border-body-color resize-none"></textarea>
+                                            </div> <!-- single form -->
+                                        </div>
+                                    </div>
+                                    <p class="form-message mx-3"></p>
+                                    <div class="w-full">
+                                        <div class="mx-3">
+                                            <div class="single_form mt-8">
+                                                <button type="submit" class="main-btn contact-btn">Envoyer</button>
+                                            </div> <!-- single form -->
+                                        </div>
+                                    </div>
+                                </div> <!-- row -->
+                            </form>
+                        </div> <!-- contact form -->
+                    </div> <!-- contact wrapper -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CONTACT PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+
+    <footer id="footer" class="footer_area bg-black relative z-10">
+        <div class="shape absolute left-0 top-0 opacity-5 h-full overflow-hidden w-1/3">
+            <!-- <img src="assets/images/footer-shape-left.png" alt=""> -->
+        </div>
+        <div class="shape absolute right-0 top-0 opacity-5 h-full overflow-hidden w-1/3">
+            <!-- <img src="assets/images/footer-shape-right.png" alt=""> -->
+        </div>
+        <div class="container">
+            <div class="footer_widget pt-18 pb-120">
+                <div class="row justify-center">
+                    <div class="w-full md:w-1/2 lg:w-3/12">
+                        <div class="footer_about mt-13 mx-3">
+                            <div class="footer_logo">
+                                <a href="#"><img src="undraw_destination_re_sr74.svg" alt=""
+                                        style="height: 150px; align-items: center;"></a>
+                            </div>
+
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-5/12">
+                        <div class="footer_link_wrapper flex flex-wrap mx-3">
+                            <div class="footer_link w-1/2 md:pl-13 mt-13">
+                                <h2 class="footer_title text-xl font-semibold text-white">Nos Addresses</h2>
+                                <div class="footer_content pt-4">
+                                    <p class="text-white">646, Avenue du 30 huin, Kolwezi
+                                        Ref : Arret Dispensaire
+                                    </p>
+                                </div>
+                            </div> <!-- footer link -->
+                            <div class="footer_link w-1/2 md:pl-13 mt-13">
+                                <h2 class="footer_title text-xl font-semibold text-white">Contact</h2>
+                                <ul class="link pt-4">
+                                    <li><a href="#" class="text-white mt-4 hover:text-black">Tel: +243 995125644</a>
+                                    </li>
+                                    <li><a href="#" class="text-white mt-4 hover:text-white">Email:
+                                            support@smaraf.com</a></li>
+                                    <!-- <li><a href="#" class="text-white mt-4 hover:text-theme-color">Terms</a></li> -->
+                                </ul>
+                            </div> <!-- footer link -->
+                        </div> <!-- footer link wrapper -->
+                    </div>
+                    <div class="w-full md:w-2/3 lg:w-4/12">
+                        <div class="footer_subscribe mt-13 mx-3">
+                            <h2 class="footer_title text-xl font-semibold text-white">Newsletter</h2>
+                            <div class="subscribe_form text-right mt-9 relative">
+                                <form action="#">
+                                    <input type="text" placeholder="Enter email"
+                                        class="w-full py-5 px-6 bg-white text-black rounded-full border-none">
+                                    <button class="main-btn subscribe-btn"
+                                        style="background-color: #F06E2A">Subscribe</button>
+                                </form>
+                            </div>
+                        </div> <!-- footer subscribe -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer widget -->
+            <div
+                class="footer_copyright pt-3 pb-6 border-t-2 border-solid border-white border-opacity-10 sm:flex justify-between">
+                <div class="footer_social pt-4 mx-3 text-center">
+                    <ul class="social flex justify-c enter sm:justify-start">
+                        <li class="mr-3"><a href="https://facebook.com/uideckHQ"><i
+                                    class="lni lni-facebook-filled"></i></a></li>
+                        <li class="mr-3"><a href="https://twitter.com/uideckHQ"><i
+                                    class="lni lni-twitter-filled"></i></a></li>
+                        <li class="mr-3"><a href="https://instagram.com/uideckHQ"><i
+                                    class="lni lni-instagram-original"></i></a></li>
+                        <li class="mr-3"><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                    </ul>
+                </div> <!-- footer social -->
+                <div class="footer_copyright_content pt-4 text-center">
+                    <p class="text-white">Designed and Developed by <a href="https://smaraf.com" rel="nofollow"
+                            class="text-white hover:text-theme-color">smaraf
+                </div> <!-- footer copyright content -->
+            </div> <!-- footer copyright -->
+        </div> <!-- container -->
+    </footer>
+
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="scroll-top" style="background-color: #F06E2A"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== PART START ======-->
+
+    <!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!--====== PART ENDS ======-->
+
+
+    <!--====== Tiny Slider js ======-->
+    <script src="assets/js/tiny-slider.js"></script>
+
+    <!--====== Wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
